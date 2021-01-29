@@ -1,0 +1,16 @@
+#user {
+  .occupied {
+    background-color: lightcoral;
+    border-radius: 5px;
+    padding: 2px;
+    width: 100px;
+    text-align: center;
+  }
+  .free {
+    background-color: lightgreen;
+    border-radius: 5px;
+    padding: 2px;
+    width: 100px;
+    text-align: center;
+  }
+}

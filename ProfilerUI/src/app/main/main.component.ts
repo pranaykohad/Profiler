@@ -24,15 +24,13 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (
-      this.employee &&
-      this.employee.role === 'ADMIN' &&
-      !this.employeeService.getLocalUserName()
-    ) {
+    if (!this.employeeService.getLocalUserName()) {
       this.router.navigateByUrl('/');
-    } else {
-      this.alert.message = 'cool';
-      this.alert.type = 'SUCCESS';
     }
+  }
+
+  logout() {
+    this.localStoreService.resetLocalStorage();
+    this.router.navigateByUrl('/');
   }
 }

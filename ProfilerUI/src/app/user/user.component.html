@@ -1,0 +1,38 @@
+<div id="user" class="p-2">
+  <div class="row pl-3">
+    <div class="row form-group col-md-4">
+      <label for="firstname" class="mr-2">First Name: </label>
+      <input class="form-control form-control-sm col-md-8" id="firstname" placeholder="First Name" name="firstname"
+        [value]="employee.firstName" />
+    </div>
+    <div class="row form-group col-md-4">
+      <label for="middlename" class="mr-2">Middle Name: </label>
+      <input class="form-control form-control-sm col-md-8" id="middlename" placeholder="Middle Name" name="middlename"
+        [value]="employee.middleName" />
+    </div>
+    <div class="row form-group col-md-4">
+      <label for="lastname" class="mr-2">Last Name: </label>
+      <input class="form-control form-control-sm col-md-8" id="lastname" placeholder="Last Name" name="lastname"
+        [value]="employee.lastName" />
+    </div>
+  </div>
+  <div class="row pl-3">
+    <div class="row form-group col-md-4">
+      <label for="username" class="mr-2">Username: </label>
+      <input class="form-control form-control-sm col-md-8" id="username" placeholder="Username" name="username"
+        [value]="employee.userName" />
+    </div>
+    <div class="row form-group col-md-4">
+      <label for="password" class="mr-2">Password: </label>
+      <input type="password" class="form-control form-control-sm col-md-8" id="password" placeholder="Password"
+        name="password" [value]="employee.password" />
+    </div>
+    <div class="row form-group col-md-4">
+      <label for="status" class="mr-2">Status: </label>
+      <label class="mr-2" [ngClass]="employee.status === 'OCCUPIED' ? 'occupied' : 'free'">{{employee.status}}</label>
+    </div>
+  </div>
+  <div>
+    <app-project-list></app-project-list>
+  </div>
+</div>

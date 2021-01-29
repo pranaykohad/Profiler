@@ -1,0 +1,22 @@
+<div id="project-list" class="p-3">
+  <div class="project-label">Project:</div><br>
+  <div class="row form-group col-md-12" *ngFor="let project of projectList; let index = index">
+    <div><span>{{index+1+' ) '}}</span>
+      <label for="status" class="mr-2 project-sub-label">Project Name: </label>
+      <label>{{project.projectName}}</label>
+    </div><span class="mr-2">;</span>
+    <div>
+      <label for="status" class="mr-2 project-sub-label">Employee Position: </label>
+      <label>{{project.empPosition}}</label>
+    </div><span class="mr-2">;</span>
+    <div>
+      <label for="status" class="mr-2 project-sub-label">Start Date: </label>
+      <label>{{project.stateDate}}</label>
+    </div><span class="mr-2">;</span>
+    <div>
+      <label for="status" class="mr-2 project-sub-label">End Date: </label>
+      <label class="mr-2">{{project.endDate ? project.endDate :
+        today.getFullYear()+'/'+today.getMonth()+1+'/'+today.getDate()}}</label>
+    </div>
+  </div>
+</div>

@@ -12,19 +12,16 @@
       <i class="fa fa-bars" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
         aria-hidden="true" style="font-size: 30px"></i>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="javascript:void(0);">Download Today's Report</a>
-        <a class="dropdown-item" href="javascript:void(0);">Custom
-          Report</a>
-        <a class="dropdown-item" href="javascript:void(0);">Defaulters List</a>
-        <a class="dropdown-item" href="javascript:void(0);">Add User</a>
-        <a class="dropdown-item" href="javascript:void(0);">Delete
-          User</a>
-        <a class="dropdown-item" href="javascript:void(0);">Logout</a>
+        <a class="dropdown-item" href="javascript:void(0);" (click)="logout()">Logout</a>
       </div>
     </div>
   </header>
-  <div>
-    <div></div>
+  <hr>
+  <div *ngIf="employee.role === 'ADMIN'; else normaluser">
+    admin
   </div>
+  <ng-template #normaluser>
+    <app-user [employee]="employee"></app-user>
+  </ng-template>
   <footer></footer>
 </div>

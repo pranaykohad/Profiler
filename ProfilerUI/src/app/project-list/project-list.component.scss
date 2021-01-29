@@ -1,0 +1,10 @@
+#project-list {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  .project-label {
+    font-weight: bold;
+  }
+  .project-sub-label {
+    font-weight: 500;
+  }
+}
