@@ -1,0 +1,30 @@
+<div id="app" class="p-3">
+  <header style="display: flex;">
+    <div class="row col-md-3 ml-0 al-cntr">
+      <img class="pr-2 logo" src="../../assets/profiler.svg" alt="logo" />
+      <div class="ml-2 gradient-text logo-name">Profiler</div>
+    </div>
+    <div class="col-md-6 alert-parent">
+      <app-alert [message]="alert.message" [type]="alert.type">
+      </app-alert>
+    </div>
+    <div class="dropdown col-md-3 top-right-contr pr-0">
+      <i class="fa fa-bars" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+        aria-hidden="true" style="font-size: 30px"></i>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="javascript:void(0);">Download Today's Report</a>
+        <a class="dropdown-item" href="javascript:void(0);">Custom
+          Report</a>
+        <a class="dropdown-item" href="javascript:void(0);">Defaulters List</a>
+        <a class="dropdown-item" href="javascript:void(0);">Add User</a>
+        <a class="dropdown-item" href="javascript:void(0);">Delete
+          User</a>
+        <a class="dropdown-item" href="javascript:void(0);">Logout</a>
+      </div>
+    </div>
+  </header>
+  <div>
+    <div></div>
+  </div>
+  <footer></footer>
+</div>

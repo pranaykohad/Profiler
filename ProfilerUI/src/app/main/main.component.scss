@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Jura";
+  font-style: "meduim";
+  font-weight: 500;
+  src: local("Jura-Meduim"),
+    url("../../assets/Jura/Jura-VariableFont_wght.ttf") format("opentype");
+}
+#app {
+  .gradient-text {
+    font-family: "Jura", sans-serif;
+    background-image: -webkit-linear-gradient(#ffc837, #ff8008);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .logo-name {
+    font-size: 35px;
+  }
+  .logo {
+    width: 50px;
+    border-right: 1px solid #ffa41f;
+  }
+  .top-right-contr {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,24 @@
+<div id="loginPage" style="height: 96vh;">
+  <div style="display: flex; align-items: center;">
+    <img class="pr-2 logo" src="../../assets/profiler.svg" alt="logo" />
+    <div class="ml-2 gradient-text logo-name">Profiler</div>
+  </div>
+  <div class="login-contr">
+    <div>
+      <div class="form-group">
+        <label for="username">Username: </label>
+        <input class="form-control" id="username" placeholder="username" name="username"
+          [(ngModel)]="employee.userName" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="password" class="form-control" id="password" placeholder="password" name="password"
+          [(ngModel)]="employee.password" />
+      </div>
+      <div class="wrong-cred" *ngIf="wrongCred">{{ errorMsg }}</div>
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <button (click)="login()" class="btn btn-primary">Login</button>
+    </div>
+  </div>
+</div>
